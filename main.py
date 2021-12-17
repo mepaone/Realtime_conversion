@@ -8,7 +8,7 @@ def index():
 @app.route("/convert",methods=['POST','GET'])
 def convert():
     result,x="",""
-    if request.method == 'POST':
+    if request.method == 'POST' and request.form.get('amount'):
         if request.form.get('from_currency')==request.form.get('to_currency'):
             result=request.form.get('amount')
         else:
