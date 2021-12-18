@@ -1,4 +1,9 @@
 {% extends "layout.html" %}
+        {% block nav %}
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link" href="/convert">Conversion</a>
+          <a class="nav-link" href="#">About Us</a>
+        {% endblock nav %}
 {% block content %}
 <main class="px-3">
     <h1>Real Time Currency Converter</h1>
