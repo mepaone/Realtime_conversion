@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+        {% block nav %}
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link" href="/convert">Conversion</a>
+          <a class="nav-link" href="/about">About Us</a>
+        {% endblock nav %}
+{% block content %}
+<main class="px-3">
+    <h1>Real Time Currency Converter</h1>
+    <br><br>
+    <p class="lead">The main aim of this application is to utilize the Python programming language for the implementation of real time currency conversion. The application is to be developed to represent dynamic functionalities as that of online currency converters. The application can perform for simultaneous currency conversion by utilizing online information source.</p>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  LEARN MORE
+</button>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel" style="color: black;">ABOUT OUR PROJECT</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="color: black;">
+        An application is to be developed to represent dynamic functionalities like online currency converter. The
+application can simultaneously convert to currency using an online information source.
+Different countries use different currencies and these currencies change daily compared to each other. Those who
+have transferred money (one currency to another) from one country to another must be updated with the latest
+currency exchange rates in the market.
+With this in mind, the Currency Converter project has been created. This is just an app development like a calculator
+using Python. In this application, there are regular updates about each country's currency by which it reflects the
+current currency market value and conversion rate.
+      </div>
+    </div>
+  </div>
+</div>
+  </main>
+{% endblock content %}

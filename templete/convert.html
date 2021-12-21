@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+        {% block nav %}
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+          <a class="nav-link active" href="/convert">Conversion</a>
+          <a class="nav-link" href="/about">About Us</a>
+
+        {% endblock nav %}
+    {% block alert %}
+{% if alert %}
+<div class="alert alert-danger d-flex align-items-center" role="alert">
+  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+  <div>
+    <h6>{{al}}</h6>
+  </div>
+</div>
+<!--<div class="alert alert-danger" role="alert">-->
+<!--  <h6>{{al}}</h6>-->
+<!--</div>-->
+{% endif %}
+    {% endblock alert %}
+{% block content %}
+  <main class="px-3">
+
+    <div class="position-relative">
+    <div class="position-absolute top-40 start-50 translate-middle">
+    <form class="row g-3" action="/convert" method="POST">
+      <div class="w-75 p-3">
+        <input type="tel" class="form-control" name='amount' aria-label="Text input with radio button" placeholder="ENTER CURRENCY">
+      </div>
+      <div class="col-auto">
+        <select class="form-select" name='from_currency' aria-label="Default select example">
+          <option selected>Present form</option>
+         <option value = "EUR" > EUR </option>
+        <option value = "IDR" > IDR </option>
+        <option value = "BGN" > BGN </option>
+        <option value = "ILS" > ILS </option>
+        <option value = "GBP" > GBP </option>
+        <option value = "DKK" > DKK </option>
+        <option value = "CAD" > CAD </option>
+        <option value = "JPY" > JPY </option>
+        <option value = "HUF" > HUF </option>
+        <option value = "RON" > RON </option>
+        <option value = "MYR" > MYR </option>
+        <option value = "SEK" > SEK </option>
+        <option value = "SGD" > SGD </option>
+        <option value = "HKD" > HKD </option>
+        <option value = "AUD" > AUD </option>
+        <option value = "CHF" > CHF </option>
+        <option value = "KRW" > KRW </option>
+        <option value = "CNY" > CNY </option>
+        <option value = "TRY" > TRY </option>
+        <option value = "HRK" > HRK </option>
+        <option value = "NZD" > NZD </option>
+        <option value = "THB" > THB </option>
+        <option value = "USD" > USD </option>
+        <option value = "NOK" > NOK </option>
+        <option value = "RUB" > RUB </option>
+        <option value = "INR" > INR </option>
+        <option value = "MXN" > MXN </option>
+        <option value = "CZK" > CZK </option>
+        <option value = "BRL" > BRL </option>
+        <option value = "PLN" > PLN </option>
+        <option value = "PHP" > PHP </option>
+        <option value = "ZAR" > ZAR </option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <select class="form-select" name='to_currency' aria-label="Default select example">
+          <option selected>Conversion form</option>
+                   <option value = "EUR" > EUR </option>
+        <option value = "IDR" > IDR </option>
+        <option value = "BGN" > BGN </option>
+        <option value = "ILS" > ILS </option>
+        <option value = "GBP" > GBP </option>
+        <option value = "DKK" > DKK </option>
+        <option value = "CAD" > CAD </option>
+        <option value = "JPY" > JPY </option>
+        <option value = "HUF" > HUF </option>
+        <option value = "RON" > RON </option>
+        <option value = "MYR" > MYR </option>
+        <option value = "SEK" > SEK </option>
+        <option value = "SGD" > SGD </option>
+        <option value = "HKD" > HKD </option>
+        <option value = "AUD" > AUD </option>
+        <option value = "CHF" > CHF </option>
+        <option value = "KRW" > KRW </option>
+        <option value = "CNY" > CNY </option>
+        <option value = "TRY" > TRY </option>
+        <option value = "HRK" > HRK </option>
+        <option value = "NZD" > NZD </option>
+        <option value = "THB" > THB </option>
+        <option value = "USD" > USD </option>
+        <option value = "NOK" > NOK </option>
+        <option value = "RUB" > RUB </option>
+        <option value = "INR" > INR </option>
+        <option value = "MXN" > MXN </option>
+        <option value = "CZK" > CZK </option>
+        <option value = "BRL" > BRL </option>
+        <option value = "PLN" > PLN </option>
+        <option value = "PHP" > PHP </option>
+        <option value = "ZAR" > ZAR </option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-outline-success">FETCH</button>
+      </div>
+    </form>
+    <br>
+    <div class="col-auto">
+      <div class="card" style="width: 29rem;color:black;">
+        <div class="card-body">
+          <p class="card-text" >{{ans}} </p>
+<!--          <p class="card-text" >{{normal}} </p>-->
+        </div>
+      </div>
+    </div>
+      </div></div>
+
+  </main>
+
+
+{% endblock content %}
